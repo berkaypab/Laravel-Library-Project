@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/home2', function () {
     return view('welcome');
 });
-Route::redirect('/anasayfa', '/home')->name('anasayfa');;
+Route::redirect('/anasayfa', '/home')->name('anasayfa');
 
 Route::get('/home', function () {
     return view('home.index');
@@ -29,6 +29,8 @@ Route::get('/aboutus', [HomeController::class, 'aboutus'])->name('aboutus');
 //Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
 Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->whereNumber('id')->whereAlpha('name')->name('test');
 
+// Admin
+Route::get('/admin', [\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('adminhome');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

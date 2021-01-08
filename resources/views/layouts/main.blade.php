@@ -31,12 +31,10 @@
     <!-- Stylesheet -->
     <link href="{{asset('assets')}}/style.css" rel="stylesheet" type="text/css"/>
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
+
     <script src="{{asset('assets')}}/js/html5shiv.min.js"></script>
     <script src="{{asset('assets')}}/js/respond.min.js"></script>
-    <![endif]-->
+
 
 </head>
 <body class="layout-v3">
@@ -45,9 +43,8 @@
 @include('home._features')
 @section('content')
    Content Area <br>
-    <br>
-    <br>
-    <br>
+    <br><br><br><br>
+
 
 @show
 @include('home._welcome')
