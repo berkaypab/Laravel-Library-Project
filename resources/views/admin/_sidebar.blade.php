@@ -2,16 +2,18 @@
 <nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
         <li class="nav-item nav-profile">
+            @auth()
             <a href="#" class="nav-link">
                 <div class="profile-image">
                     <img class="img-xs rounded-circle" src="{{asset('assets')}}/admin/assets/images/faces/face8.jpg" alt="profile image">
                     <div class="dot-indicator bg-success"></div>
                 </div>
                 <div class="text-wrapper">
-                    <p class="profile-name">Allen Moreno</p>
+                    <p class="profile-name">{{Auth::user()->name}}</p>
                     <p class="designation">Premium user</p>
                 </div>
             </a>
+            @endauth
         </li>
         <li class="nav-item nav-category">Main Menu</li>
         <li class="nav-item">
@@ -76,7 +78,7 @@
                         <a class="nav-link" href="{{asset('assets')}}/admin/pages/samples/blank-page.html"> Blank Page </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{asset('assets')}}/admin/pages/samples/login.html"> Login </a>
+                        <a class="nav-link" href="{{route('admin_login')}}"> Login </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{asset('assets')}}/admin/pages/samples/register.html"> Register </a>
@@ -86,6 +88,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{asset('assets')}}/admin/pages/samples/error-500.html"> 500 </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('admin_logout')}}"> Logout </a>
                     </li>
                 </ul>
             </div>
