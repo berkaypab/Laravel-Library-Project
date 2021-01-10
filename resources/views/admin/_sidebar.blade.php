@@ -22,6 +22,20 @@
                 <span class="menu-title">Dashboard</span>
             </a>
         </li>
+
+        </li><li class="nav-item">
+            <a class="nav-link" href="{{route('admin_category')}}">
+                <i class="menu-icon typcn typcn-document-text"></i>
+                <span class="menu-title">Category</span>
+            </a>
+        </li>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('admin_home')}}">
+                <i class="menu-icon typcn typcn-document-text"></i>
+                <span class="menu-title">Products</span>
+            </a>
+        </li>
         <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <i class="menu-icon typcn typcn-coffee"></i>
