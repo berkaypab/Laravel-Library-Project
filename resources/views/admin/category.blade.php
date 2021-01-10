@@ -7,9 +7,11 @@
 @section("content")
 <section class="content">
     <div>
-        Body Area
+
     </div>
 <h3>Categories</h3>
+    <hr>
+    <a href="{{route('admin_category_add')}}" type="button" class="btn btn-primary btn-fw">Add category</a>
     <table class="table">
         <thead>
         <tr>
@@ -31,7 +33,7 @@
             <td>{{$rs->title}}</td>
             <td>{{$rs->status}}</td>
             <td>Edit</td>
-            <td>Delete</td>
+            <td><a href="{{route('admin_category_delete',['id'=>$rs->id])}}" onclick="return confirm('The data will be deleted Sure?')">Delete</a></td>
 
             <td>
                 <label class="badge badge-danger">Pending</label>
