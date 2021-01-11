@@ -1,6 +1,6 @@
 @extends('layouts.admin')
 
-@section('title', 'Admin Panel Category Add')
+@section('title', 'Edit Category')
 
 
 
@@ -14,48 +14,51 @@
                 <div class="card-body">
                     <h4 class="card-title">Category Add Form</h4>
                     <hr>
-                    <form class="forms-sample" action="{{route('admin_category_add')}}" method="post">
+                    <form class="forms-sample" action="{{route('admin_category_update',['id'=>$data->id])}}"
+                          method="post">
 
                         @csrf
                         <div class="form-group">
                             <label>Parent</label>
                             <select class="form-control form-control-lg" name="parent_id">
-                                <option value="0" selected="selected">Main Category</option>
+                                <option value="0">Main Category</option>
                                 @foreach($datalist as $rs)
-                                <option value="{{$rs->id}}">{{$rs->title}}</option>
+                                    <option value="{{$rs->id}}"
+                                            @if ($rs->id==$data->parent_id) selected="selected" @endif>{{$rs->title}}</option>
                                 @endforeach
                             </select>
                         </div>
                         <div class="form-group">
                             <label>Title</label>
-                            <input type="text" class="form-control" name="title">
+                            <input type="text" class="form-control" value="{{$data->title}}" name="title">
                         </div>
 
                         <div class="form-group">
                             <label>Keywords</label>
-                            <input type="text" class="form-control" name="keywords">
+                            <input type="text" class="form-control" name="keywords" value="{{$data->keywords}}">
                         </div>
 
                         <div class="form-group">
                             <label>Description</label>
-                            <input type="text" class="form-control" name="description">
+                            <input type="text" class="form-control" name="description" value="{{$data->description}}">
                         </div>
 
                         <div class="form-group">
                             <label>Slug</label>
-                            <input type="text" class="form-control" name="slug">
+                            <input type="text" class="form-control" name="slug" value="{{$data->slug}}">
                         </div>
 
                         <div class="form-group">
                             <label>Status</label>
                             <select class="form-control form-control-lg" name="status">
+                                <option selected="selected">{{$data->status}}</option>
                                 <option>True</option>
                                 <option>False</option>
                             </select>
                         </div>
                         <br>
 
-                        <button type="submit" class="btn btn-success mr-2">Add to Category</button>
+                        <button type="submit" class="btn btn-success mr-2">Update Category</button>
                         <button class="btn btn-light">Cancel</button>
                     </form>
                 </div>

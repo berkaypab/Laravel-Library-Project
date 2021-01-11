@@ -19,11 +19,12 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dda39e66-985c-4be5-b7a6-2a00a87ec8f3" name="Default Changelist" comment="Creating a category table and entering data&#10;Creating category controller file &#10;Showing data on the page">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" afterDir="false" />
+    <list default="true" id="dda39e66-985c-4be5-b7a6-2a00a87ec8f3" name="Default Changelist" comment="Add to category &#10;Delete from category &#10;Routing set&#10;View set&#10;Model set">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/category_edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -218,7 +219,7 @@
       <workItem from="1608278314901" duration="19964000" />
       <workItem from="1608385735569" duration="1882000" />
       <workItem from="1609942932639" duration="14986000" />
-      <workItem from="1610135566572" duration="40120000" />
+      <workItem from="1610135566572" duration="47738000" />
     </task>
     <task id="LOCAL-00001" summary="All pages added to project">
       <created>1608385097387</created>
@@ -255,7 +256,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610277152833</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Add to category &#10;Delete from category &#10;Routing set&#10;View set&#10;Model set">
+      <created>1610297220255</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1610297220255</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +288,8 @@
     <MESSAGE value="İmplementation for admin panel" />
     <MESSAGE value="admin panel login operations" />
     <MESSAGE value="Creating a category table and entering data&#10;Creating category controller file &#10;Showing data on the page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating a category table and entering data&#10;Creating category controller file &#10;Showing data on the page" />
+    <MESSAGE value="Add to category &#10;Delete from category &#10;Routing set&#10;View set&#10;Model set" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add to category &#10;Delete from category &#10;Routing set&#10;View set&#10;Model set" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="163" key="#PHP" timestamp="1607779534987">
@@ -319,10 +328,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1608364538040" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610277156653">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610297221881">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610277156653" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610297221881" />
     <state x="703" y="254" key="VcsDiffUtil.ChangesDialog" timestamp="1608385281008">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
