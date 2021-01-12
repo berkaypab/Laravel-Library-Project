@@ -63,7 +63,14 @@
                         </div>
                         <div class="form-group">
                             <label>Detail</label>
-                            <input type="text" class="form-control" name="detail">
+                            <textarea id="summernote" name="detail"></textarea>
+                            <script>
+                                $('#summernote').summernote({
+                                    placeholder: 'Hello Bootstrap 4',
+                                    tabsize: 2,
+                                    height: 100
+                                });
+                            </script>
                         </div>
                         <div class="form-group">
                             <label>Slug</label>
