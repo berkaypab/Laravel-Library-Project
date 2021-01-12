@@ -19,12 +19,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dda39e66-985c-4be5-b7a6-2a00a87ec8f3" name="Default Changelist" comment="Add to category &#10;Delete from category &#10;Routing set&#10;View set&#10;Model set">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/category_edit.blade.php" afterDir="false" />
+    <list default="true" id="dda39e66-985c-4be5-b7a6-2a00a87ec8f3" name="Default Changelist" comment="Category editing process">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/ProductController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_11_130848_create_products_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_11_132101_product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/product.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/product_add.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/product_edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/category_add.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -187,14 +191,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\php\LaravelwJetStream\resources\views\admin" />
-      <recent name="C:\php\LaravelwJetStream\resources\views" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\php\LaravelwJetStream\resources\views\admin" />
       <recent name="C:\php\LaravelwJetStream\app\Http\Controllers\Admin" />
       <recent name="C:\php\LaravelwJetStream\resources\views\home" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\php\LaravelwJetStream\resources\views\admin" />
+      <recent name="C:\php\LaravelwJetStream\resources\views" />
     </key>
   </component>
   <component name="RunManager">
@@ -219,7 +223,8 @@
       <workItem from="1608278314901" duration="19964000" />
       <workItem from="1608385735569" duration="1882000" />
       <workItem from="1609942932639" duration="14986000" />
-      <workItem from="1610135566572" duration="47738000" />
+      <workItem from="1610135566572" duration="65582000" />
+      <workItem from="1610413863568" duration="3869000" />
     </task>
     <task id="LOCAL-00001" summary="All pages added to project">
       <created>1608385097387</created>
@@ -263,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610297220255</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Category editing process">
+      <created>1610329026477</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1610329026477</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +301,8 @@
     <MESSAGE value="admin panel login operations" />
     <MESSAGE value="Creating a category table and entering data&#10;Creating category controller file &#10;Showing data on the page" />
     <MESSAGE value="Add to category &#10;Delete from category &#10;Routing set&#10;View set&#10;Model set" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add to category &#10;Delete from category &#10;Routing set&#10;View set&#10;Model set" />
+    <MESSAGE value="Category editing process" />
+    <option name="LAST_COMMIT_MESSAGE" value="Category editing process" />
   </component>
   <component name="WindowStateProjectService">
     <state x="667" y="163" key="#PHP" timestamp="1607779534987">
@@ -300,6 +313,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="178" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610148845137" />
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1610419874089">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="275" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610419874089" />
     <state width="938" height="282" key="GridCell.Tab.0.bottom" timestamp="1610139176564">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -328,14 +345,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1608364538040" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610297221881">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1610329028084">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610297221881" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1610329028084" />
     <state x="703" y="254" key="VcsDiffUtil.ChangesDialog" timestamp="1608385281008">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="703" y="254" key="VcsDiffUtil.ChangesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608385281008" />
+    <state x="803" y="223" width="565" height="594" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1610407607703">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="803" y="223" width="565" height="594" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610407607703" />
     <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1608265848483">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -348,10 +369,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="667" y="119" width="585" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1608366365187" />
-    <state x="677" y="291" key="refactoring.ChangeSignatureDialog" timestamp="1610158699229">
+    <state x="677" y="291" key="refactoring.ChangeSignatureDialog" timestamp="1610399874892">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="677" y="291" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610158699229" />
+    <state x="677" y="291" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1610399874892" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1608367256029">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -3,16 +3,17 @@
     <ul class="nav">
         <li class="nav-item nav-profile">
             @auth()
-            <a href="#" class="nav-link">
-                <div class="profile-image">
-                    <img class="img-xs rounded-circle" src="{{asset('assets')}}/admin/assets/images/faces/face8.jpg" alt="profile image">
-                    <div class="dot-indicator bg-success"></div>
-                </div>
-                <div class="text-wrapper">
-                    <p class="profile-name">{{Auth::user()->name}}</p>
-                    <p class="designation">Premium user</p>
-                </div>
-            </a>
+                <a href="#" class="nav-link">
+                    <div class="profile-image">
+                        <img class="img-xs rounded-circle" src="{{asset('assets')}}/admin/assets/images/faces/face8.jpg"
+                             alt="profile image">
+                        <div class="dot-indicator bg-success"></div>
+                    </div>
+                    <div class="text-wrapper">
+                        <p class="profile-name">{{Auth::user()->name}}</p>
+                        <p class="designation">Premium user</p>
+                    </div>
+                </a>
             @endauth
         </li>
         <li class="nav-item nav-category">Main Menu</li>
@@ -22,16 +23,14 @@
                 <span class="menu-title">Dashboard</span>
             </a>
         </li>
-
-        </li><li class="nav-item">
+        <li class="nav-item">
             <a class="nav-link" href="{{route('admin_category')}}">
                 <i class="menu-icon typcn typcn-document-text"></i>
                 <span class="menu-title">Category</span>
             </a>
         </li>
-        </li>
         <li class="nav-item">
-            <a class="nav-link" href="{{route('admin_home')}}">
+            <a class="nav-link" href="{{route('admin_products')}}">
                 <i class="menu-icon typcn typcn-document-text"></i>
                 <span class="menu-title">Products</span>
             </a>
@@ -48,7 +47,8 @@
                         <a class="nav-link" href="{{asset('assets')}}/admin/pages/ui-features/buttons.html">Buttons</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{asset('assets')}}/admin/pages/ui-features/dropdowns.html">Dropdowns</a>
+                        <a class="nav-link"
+                           href="{{asset('assets')}}/admin/pages/ui-features/dropdowns.html">Dropdowns</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{asset('assets')}}/admin/pages/ui-features/typography.html">Typography</a>
@@ -89,7 +89,8 @@
             <div class="collapse" id="auth">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{asset('assets')}}/admin/pages/samples/blank-page.html"> Blank Page </a>
+                        <a class="nav-link" href="{{asset('assets')}}/admin/pages/samples/blank-page.html"> Blank
+                            Page </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{route('admin_login')}}"> Login </a>
