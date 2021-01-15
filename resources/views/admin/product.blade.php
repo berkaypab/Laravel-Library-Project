@@ -23,6 +23,7 @@
                 <th>Price(s)</th>
                 <th>Quantity</th>
                 <th>Image</th>
+                <th>Image Gallery</th>
                 <th>Status</th>
                 <th colspan="2">Actions</th>
             </tr>
@@ -37,14 +38,23 @@
                     <td>{{$rs->title}}</td>
                     <td>{{$rs->price}}</td>
                     <td>{{$rs->quantity}}</td>
-                    <td>{{$rs->image}}</td>
+                    <td>
+                        @if($rs->image)
+                            <img src="{{Storage::url($rs->image)}}" height="30">
+                        @endif
+                    </td>
+                    <td><a href="{{route('admin_image_add',['product_id'=>$rs->id])}}"
+                           onclick="return !window.open(this.href,'','top=50 left=100 width=1100,height=700')"><img
+                                src="{{asset('assets')}}/admin/images/image_gallery.png" height="12"></a></td>
                     <td>{{$rs->status}}</td>
                     <td><a href="{{route('admin_product_edit',['id'=>$rs->id])}}">
-                            <ion-icon name="create-outline">Edit</ion-icon>
+                            <img
+                                src="{{asset('assets')}}/admin/images/edit.png" height="12">
                         </a></td>
                     <td><a href="{{route('admin_product_delete',['id'=>$rs->id])}}"
                            onclick="return confirm('The data will be deleted Sure?')">
-                            <ion-icon name="trash-outline">Delete</ion-icon>
+                            <img
+                                src="{{asset('assets')}}/admin/images/delete.png" height="12">
                         </a></td>
 
                     <td>

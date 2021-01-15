@@ -80,6 +80,16 @@
                             <input type="text" class="form-control" value="{{$data->slug}}" name="slug">
                         </div>
                         <div class="form-group">
+                            <label>Image</label>
+                            <input type="file" class="form-control" value="{{$data->image}}" name="image">
+
+                            @if($data->image)
+                                <img src="{{Storage::url($data->image)}}" height="100" alt="">
+                            @endif
+
+                        </div>
+
+                        <div class="form-group">
                             <label>Status</label>
                             <select class="form-control form-control-lg" name="status">
                                 <option selected="selected">{{$data->status}}</option>

@@ -14,7 +14,8 @@
                 <div class="card-body">
                     <h4 class="card-title">Product Add Form</h4>
                     <hr>
-                    <form class="forms-sample" action="{{route('admin_product_store')}}" method="post">
+                    <form class="forms-sample" action="{{route('admin_product_store')}}" method="post"
+                          enctype="multipart/form-data">
                         @csrf
                         <div class="form-group">
                             <label>Parent</label>
@@ -60,6 +61,10 @@
                         <div class="form-group">
                             <label>Tax</label>
                             <input type="number" class="form-control" name="tax" value="18">
+                        </div>
+                        <div class="form-group">
+                            <label>Image</label>
+                            <input type="file" class="form-control" name="image">
                         </div>
                         <div class="form-group">
                             <label>Detail</label>

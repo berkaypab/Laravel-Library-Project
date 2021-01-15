@@ -8,6 +8,7 @@ use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
 
 class ProductController extends Controller
 {
@@ -55,12 +56,12 @@ class ProductController extends Controller
         $data->minquantity = $request->input('minquantity');
         $data->year = $request->input('year');
         $data->tax = (int)$request->input('tax');
-        $data->detail = (int)$request->input('detail');
         $data->slug = $request->input('slug');
         $data->status = $request->input('status');
         $data->category_id = $request->input('category_id');
         $data->user_id = Auth::id();
         $data->detail = $request->input('detail');
+        $data->image = Storage::putFile('images', $request->file('image'));
         $data->save();
         return redirect()->route('admin_products');
 
@@ -83,12 +84,12 @@ class ProductController extends Controller
      * @param \App\Models\Product $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product,$id)
+    public function edit(Product $product, $id)
     {
         //
         $data = Product::find($id);
         $datalist = Category::all();
-        return view('admin.product_edit',['data'=>$data ,'datalist'=>$datalist]);
+        return view('admin.product_edit', ['data' => $data, 'datalist' => $datalist]);
     }
 
     /**
@@ -98,7 +99,7 @@ class ProductController extends Controller
      * @param \App\Models\Product $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product,$id)
+    public function update(Request $request, Product $product, $id)
     {
         //
         $data = Product::find($id);
@@ -111,12 +112,14 @@ class ProductController extends Controller
         $data->minquantity = $request->input('minquantity');
         $data->year = $request->input('year');
         $data->tax = (int)$request->input('tax');
-        $data->detail = (int)$request->input('detail');
+        $data->detail = $request->input('detail');
         $data->slug = $request->input('slug');
         $data->status = $request->input('status');
         $data->category_id = $request->input('category_id');
         $data->user_id = Auth::id();
         $data->detail = $request->input('detail');
+        //$data->image = Storage::putFile('images', $request->file('image'));
+
         $data->save();
         return redirect()->route('admin_products');
     }
@@ -127,7 +130,7 @@ class ProductController extends Controller
      * @param \App\Models\Product $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product,$id)
+    public function destroy(Product $product, $id)
     {
         // DB::table('products')->where('id','=',$id)->delete();
         $data = Product::find($id);
