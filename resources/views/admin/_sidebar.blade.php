@@ -86,6 +86,12 @@
                 <span class="menu-title">User Pages</span>
                 <i class="menu-arrow"></i>
             </a>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('admin_setting')}}">
+                <i class="menu-icon"></i>
+                <span class="menu-title">Settings</span>
+
+            </a>
             <div class="collapse" id="auth">
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item">
