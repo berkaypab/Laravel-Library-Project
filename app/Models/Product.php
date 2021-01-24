@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Product extends Model
 {
     use HasFactory;
+    #One to Many (Inverse) / Belongs to
+    public function category (){
+        return $this->belongsTo(Category::class);
+    }
 }

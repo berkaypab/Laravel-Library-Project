@@ -32,7 +32,7 @@
             @foreach($datalist as $rs)
                 <tr>
                     <td>{{$rs->id}}</td>
-                    <td>{{$rs->category_id}}</td>
+                    <td>{{$rs->category->title}}</td>
                     <td>{{$rs->year}}</td>
                     <td>{{$rs->publisher}}</td>
                     <td>{{$rs->title}}</td>
