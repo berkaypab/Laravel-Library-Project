@@ -1,9 +1,9 @@
 @extends('layouts.main')
 
-@section('title', 'Laravel Library')
+@section('title', $setting->title)
 @section('description')
-    Best eBook Library
+{{$setting->description}}
 @endsection
-@section('keywords','Science','History','Math','Geography')
+@section('keywords',$setting->keywords)
 
 

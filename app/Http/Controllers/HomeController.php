@@ -2,33 +2,74 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Admin\SettingController;
+use App\Models\Category;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class HomeController extends Controller
 {
-    //
-    public function index(){
-       // echo "Home controller Test";
 
-        return view('home.index');
+    public static function categoryList()
+    {
+
+
+        return Category::where('parent_id', '=', 0)->with('children')->get();
     }
-    public function aboutus(){
+
+    public static function getsetting()
+    {
+        return Setting::first();
+    }
+
+    public function index()
+    {
+        // echo "Home controller Test";
+
+        $setting = Setting::first();
+        return view('home.index',['setting'=>$setting]);
+    }
+
+    public function aboutus()
+    {
         // echo "Home controller Test";
 
         return view('home.aboutus');
     }
-    public function login(){
+    public function references()
+    {
+        // echo "Home controller Test";
+
+        return view('home.aboutus');
+    }
+    public function faq()
+    {
+        // echo "Home controller Test";
+
+        return view('home.aboutus');
+    }
+    public function contact()
+    {
+        // echo "Home controller Test";
+
+        return view('home.aboutus');
+    }
+
+    public function login()
+    {
 
         return view("admin.login");
 
 
     }
+
     public function logincheck(Request $request)
     {
         $credentials = $request->only('email', 'password');
 
-        if($request->isMethod('post')) {
+        if ($request->isMethod('post')) {
 
             $credentials = $request->only('email', 'password');
             if (Auth::attempt($credentials)) {
@@ -39,21 +80,23 @@ class HomeController extends Controller
             return back()->withErrors([
                 'email' => 'The provided credentials do not match our records.',
             ]);
-        }
-        else
+        } else
             return view('admin.login');
     }
-public function logout(Request $request){
+
+    public function logout(Request $request)
+    {
         Auth::logout();
-        $request -> session()->invalidate();
-        $request-> session()->regenerateToken();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
         return redirect('/home');
 
-}
+    }
 
-    public function test($id,$name){
+    public function test($id, $name)
+    {
 
-        return view('home.test',['id'=>$id , 'name'=>$name]);
+        return view('home.test', ['id' => $id, 'name' => $name]);
 
         /*
         echo "Home controller Test";
