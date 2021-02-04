@@ -28,28 +28,10 @@ $setting = \App\Http\Controllers\HomeController::getsetting();
                     <div class="navbar-collapse hidden-sm hidden-xs">
                         <ul class="nav navbar-nav">
 
-                            <li >
+                            <li>
                                 <a href="{{route('home')}}">Home</a>
                             </li>
 
-
-                            <!-- Category -->
-                            <!--  <div class="category-nav">
-                                    <span class="category-header">Categories<i class="fa fa-list"></i></span>
-                                    <ul class="category-list">
-
-                                            <li class="dropdown side-dropdown">
-                                                <a class="dropdown-toggle" data-toggle="dropdown"
-                                                   aria-expanded="true"><i class="fa fa-angle-right"></i></a>
-                                                <div class="custom-menu">
-                                                    <div class="row">
-
-                                                    </div>
-                                                </div>
-                                            </li>
-
-                                    </ul>
-                                </div>  -->
 
                             <li class="dropdown">
                                 <a data-toggle="dropdown" class="dropdown-toggle disabled"
@@ -82,66 +64,88 @@ $setting = \App\Http\Controllers\HomeController::getsetting();
 
                                 @guest()
 
-                                <a href="/login"><i class="fa fa-lock"></i>Login </a>
+                                    <a href="/login"><i class="fa fa-lock"></i>Login </a>
                                     <a href="/register"><i class="fa fa-user"></i>Register</a><br>
                                 @endguest
                                 @auth
-                                    <strong class="text-uppercase">{{Auth::user()->name}}</strong>
-
-                                <span>|</span>
-                                <div class="header-cart dropdown">
-                                    <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                                        <i class="fa fa-shopping-cart"></i>
-                                        <small>0</small>
-                                    </a>
 
 
-                                    <div class="dropdown-menu cart-dropdown">
-                                        <ul>
-                                            <li class="clearfix">
-                                                <img src="images/header-cart-image-01.jpg" alt="cart item" />
-                                                <div class="item-info">
-                                                    <div class="name">
-                                                        <a href="#">The Great Gatsby</a>
-                                                    </div>
-                                                    <div class="author"><strong>Author:</strong> F. Scott Fitzgerald</div>
-                                                    <div class="price">1 X $10.00</div>
-                                                </div>
-                                                <a class="remove" href="#"><i class="fa fa-trash-o"></i></a>
-                                            </li>
-                                            <li class="clearfix">
-                                                <img src="images/header-cart-image-02.jpg" alt="cart item" />
-                                                <div class="item-info">
-                                                    <div class="name">
-                                                        <a href="#">The Great Gatsby</a>
-                                                    </div>
-                                                    <div class="author"><strong>Author:</strong> F. Scott Fitzgerald</div>
-                                                    <div class="price">1 X $10.00</div>
-                                                </div>
-                                                <a class="remove" href="#"><i class="fa fa-trash-o"></i></a>
-                                            </li>
-                                            <li class="clearfix">
-                                                <img src="images/header-cart-image-03.jpg" alt="cart item" />
-                                                <div class="item-info">
-                                                    <div class="name">
-                                                        <a href="#">The Great Gatsby</a>
-                                                    </div>
-                                                    <div class="author"><strong>Author:</strong> F. Scott Fitzgerald</div>
-                                                    <div class="price">1 X $10.00</div>
-                                                </div>
-                                                <a class="remove" href="#"><i class="fa fa-trash-o"></i></a>
-                                            </li>
-                                        </ul>
-                                        <div class="cart-total">
-                                            <div class="title">SubTotal</div>
-                                            <div class="price">$30.00</div>
+
+
+
+                                        <div class="dropdown show">
+                                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                                                <strong class="text-uppercase">{{Auth::user()->name}}</strong>
+                                            </a>
+
+                                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" style="color: #0b0d14" href="{{route('myprofile')}}">My Account</a><hr>
+                                                <a class="dropdown-item" style="color: #0b0d14" href="#">Another action</a><br>
+                                                <a class="dropdown-item" style="color: #0b0d14" href="#">Something else here</a><br>
+                                            </div>
                                         </div>
-                                        <div class="cart-buttons">
-                                            <a href="{{asset('assets')}}/cart.html" class="btn btn-dark-gray">View Cart</a>
-                                            <a href="{{asset('assets')}}/checkout.html" class="btn btn-primary">Checkout</a>
+
+
+
+                                    <span>|</span>
+                                    <div class="header-cart dropdown">
+                                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                            <i class="fa fa-shopping-cart"></i>
+                                            <small>0</small>
+                                        </a>
+
+
+                                        <div class="dropdown-menu cart-dropdown">
+                                            <ul>
+                                                <li class="clearfix">
+                                                    <img src="images/header-cart-image-01.jpg" alt="cart item"/>
+                                                    <div class="item-info">
+                                                        <div class="name">
+                                                            <a href="#">The Great Gatsby</a>
+                                                        </div>
+                                                        <div class="author"><strong>Author:</strong> F. Scott Fitzgerald
+                                                        </div>
+                                                        <div class="price">1 X $10.00</div>
+                                                    </div>
+                                                    <a class="remove" href="#"><i class="fa fa-trash-o"></i></a>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <img src="images/header-cart-image-02.jpg" alt="cart item"/>
+                                                    <div class="item-info">
+                                                        <div class="name">
+                                                            <a href="#">The Great Gatsby</a>
+                                                        </div>
+                                                        <div class="author"><strong>Author:</strong> F. Scott Fitzgerald
+                                                        </div>
+                                                        <div class="price">1 X $10.00</div>
+                                                    </div>
+                                                    <a class="remove" href="#"><i class="fa fa-trash-o"></i></a>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <img src="images/header-cart-image-03.jpg" alt="cart item"/>
+                                                    <div class="item-info">
+                                                        <div class="name">
+                                                            <a href="#">The Great Gatsby</a>
+                                                        </div>
+                                                        <div class="author"><strong>Author:</strong> F. Scott Fitzgerald
+                                                        </div>
+                                                        <div class="price">1 X $10.00</div>
+                                                    </div>
+                                                    <a class="remove" href="#"><i class="fa fa-trash-o"></i></a>
+                                                </li>
+                                            </ul>
+                                            <div class="cart-total">
+                                                <div class="title">SubTotal</div>
+                                                <div class="price">$30.00</div>
+                                            </div>
+                                            <div class="cart-buttons">
+                                                <a href="{{asset('assets')}}/cart.html" class="btn btn-dark-gray">View
+                                                    Cart</a>
+                                                <a href="{{asset('assets')}}/checkout.html" class="btn btn-primary">Checkout</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
                                     <a href="{{route('logout')}}">
                                         <i class="fa fa-sign-out"></i>
                                     </a>

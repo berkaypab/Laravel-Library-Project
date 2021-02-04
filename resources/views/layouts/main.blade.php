@@ -40,7 +40,6 @@
 <body class="layout-v3">
 @include('home._header')
 @include('home._slider')
-@include('home._features')
 @section('content')
    Content Area <br>
     <br><br><br><br>
@@ -48,6 +47,7 @@
 
 @show
 @include('home._welcome')
+
 @include('home._newsletter')
 @include('home._categoryfilter')
 @include('home._ourcommunity')

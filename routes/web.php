@@ -70,6 +70,11 @@ Route::middleware('auth')->prefix('admin')->group(function (){
     Route::post('setting/update',[\App\Http\Controllers\Admin\SettingController::class,'update'])->name('admin_setting_update');
 });
 
+Route::middleware('auth')->prefix('myaccount')->namespace('myaccount')->group(function (){
+
+    Route::get('/',[\App\Http\Controllers\UserController::class,'index'])->name('myprofile');
+});
+
 //Route::get('/admin', [\App\Http\Controllers\Admin\HomeController::class, 'index'])->name('admin_home')->middleware('auth');
 Route::get('/admin/login', [HomeController::class, 'login'])->name('admin_login');
 Route::post('/admin/logincheck', [HomeController::class, 'logincheck'])->name('admin_logincheck');

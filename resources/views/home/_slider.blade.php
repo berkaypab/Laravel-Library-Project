@@ -8,7 +8,9 @@
             </figure>
             <div class="container">
                 <div class="carousel-caption">
-                    <h2>What’s all the Libraria?</h2>
+                   <br>
+                   <br>
+                   <br>
                     <p>Libraria gives you access to <strong>Audiobooks,</strong> <strong>eBooks,</strong> <strong>Music,</strong> <strong>Movies and Comics.</strong></p>
                     <div class="filter-box">
                         <form action="http://libraria.demo.presstigers.com/index.html" class="banner-filter-box" method="get">
