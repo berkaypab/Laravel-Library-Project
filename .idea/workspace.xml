@@ -19,18 +19,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dda39e66-985c-4be5-b7a6-2a00a87ec8f3" name="Default Changelist" comment="Laravel Define User Profile Page  Add Jetstream user page to panel">
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_05_103121_user.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_05_103127_add_address_to_users.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resimler/vesikalık.jpg" afterDir="false" />
+    <list default="true" id="dda39e66-985c-4be5-b7a6-2a00a87ec8f3" name="Default Changelist" comment="User Profile Photo , Phone , Address update">
+      <change afterPath="$PROJECT_DIR$/resources/views/home/_blankx.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/about.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/contact.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/references.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temps/LIBRARIA-Online-Library/LIBRARIA-Online-Library/books-media-list-view - Kopya.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temps/LIBRARIA-Online-Library/LIBRARIA-Online-Library/cart - Kopya.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Actions/Fortify/UpdateUserProfileInformation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/update-profile-information-form.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Setting.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Setting.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/aboutus.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/aboutus.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,6 +53,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -187,18 +197,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/layouts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/home" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\php\Laravel\resources\views\home" />
       <recent name="C:\xampp\php\Laravel\resources\views\layouts" />
       <recent name="C:\php\LaravelwJetStream\resources\views\admin" />
       <recent name="C:\php\LaravelwJetStream\storage\app\public\images" />
       <recent name="C:\php\LaravelwJetStream\storage\app\public" />
-      <recent name="C:\php\LaravelwJetStream\app\Http\Controllers\Admin" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\php\Laravel\public\storage" />
@@ -249,7 +259,7 @@
       <workItem from="1611339696884" duration="1181000" />
       <workItem from="1611504206779" duration="20708000" />
       <workItem from="1611744022065" duration="4959000" />
-      <workItem from="1612009951752" duration="43496000" />
+      <workItem from="1612009951752" duration="54097000" />
     </task>
     <task id="LOCAL-00001" summary="All pages added to project">
       <created>1608385097387</created>
@@ -342,7 +352,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612443874374</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="User Profile Photo , Phone , Address update">
+      <created>1612521988976</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1612521988976</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -375,6 +392,7 @@
     <MESSAGE value="Relation Category Product One to Many" />
     <MESSAGE value="Category tree and sub category&#10;Home Page Setting Meta tags data User and page links" />
     <MESSAGE value="Laravel Define User Profile Page  Add Jetstream user page to panel" />
-    <option name="LAST_COMMIT_MESSAGE" value="Laravel Define User Profile Page  Add Jetstream user page to panel" />
+    <MESSAGE value="User Profile Photo , Phone , Address update" />
+    <option name="LAST_COMMIT_MESSAGE" value="User Profile Photo , Phone , Address update" />
   </component>
 </project>

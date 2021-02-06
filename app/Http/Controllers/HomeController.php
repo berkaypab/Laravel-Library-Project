@@ -29,20 +29,21 @@ class HomeController extends Controller
         // echo "Home controller Test";
 
         $setting = Setting::first();
-        return view('home.index',['setting'=>$setting]);
+        return view('home.index',['setting'=>$setting,'page'=>'home']);
     }
 
     public function aboutus()
     {
         // echo "Home controller Test";
-
-        return view('home.aboutus');
+        $setting = Setting::first();
+        return view('home.about',['setting'=>$setting]);
     }
     public function references()
     {
         // echo "Home controller Test";
 
-        return view('home.aboutus');
+        $setting = Setting::first();
+        return view('home.references',['setting'=>$setting]);
     }
     public function faq()
     {
@@ -54,7 +55,8 @@ class HomeController extends Controller
     {
         // echo "Home controller Test";
 
-        return view('home.aboutus');
+        $setting = Setting::first();
+        return view('home.contact',['setting'=>$setting]);
     }
 
     public function login()

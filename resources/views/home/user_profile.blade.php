@@ -5,14 +5,21 @@
 
 
 @section('content')
-    <div id="breadcrumb">
+    <section class="page-banner services-banner">
         <div class="container">
-            <ul class="breadcrumb">
-                <li><a href="{{route('home')}}">Home</a></li>
-                <li class="active">User Profile</li>
-            </ul>
+            <div class="banner-header">
+                <h2>User Page</h2>
+                <span class="underline center"></span>
+
+            </div>
+            <div class="breadcrumb">
+                <ul>
+                    <li><a href="{{route('home')}}">Home</a></li>
+                    <li>User</li>
+                </ul>
+            </div>
         </div>
-    </div>
+    </section>
     <div class="section">
         <div class="container">
             <div class="row">
@@ -28,4 +35,10 @@
             </div>
         </div>
     </div>
+
+
+
+
+
+
 @endsection

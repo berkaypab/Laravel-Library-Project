@@ -1,11 +1,19 @@
-<div class="aside">
-    <h3 class="aside-title"> User Panel</h3><hr>
-    <ul class="list-links">
-        <li><a href="{{route('myprofile')}}">My Profile</a></li>
-        <li><a href="#">My Orders</a></li>
-        <li><a href="#">My Reviews</a></li>
-        <li><a href="#">My Shopcart</a></li>
-        <li><a href="#">My Messages</a></li>
-        <li><a href="{{route('logout')}}">Logout</a></li>
-    </ul>
+<div class="col-md-3 col-md-pull-9">
+    <aside id="secondary" class="sidebar widget-area">
+
+
+            <h4 class="widget-title">User Panel</h4>
+            <div class="widget_categories">
+                <ul>
+                    <li><a href="{{route('myprofile')}}">Profile</a></li>
+                    <li><a href="#">Orders</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li><a href="#">Shopcart</a></li>
+                    <li><a href="#">Messages</a></li>
+                    <li><a href="{{route('logout')}}">Logout</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+
+    </aside>
 </div>

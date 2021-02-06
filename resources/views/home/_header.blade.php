@@ -1,5 +1,5 @@
 @php
-    $parentCategories =\App\Http\Controllers\HomeController::categoryList();
+$parentCategories =\App\Http\Controllers\HomeController::categoryList();
 $setting = \App\Http\Controllers\HomeController::getsetting();
 @endphp
 
