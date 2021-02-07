@@ -31,7 +31,11 @@
     <div id="content" class="site-content">
         <div id="primary" class="content-area">
             <main id="main" class="site-main">
-                {!!$setting->references!!}
+                <div class="container">
+                    <div class="row">
+                        {!!$setting->references!!}
+                    </div>
+                </div>
             </main>
         </div>
     </div>

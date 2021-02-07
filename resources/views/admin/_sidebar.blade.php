@@ -36,6 +36,12 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{route('admin_message')}}">
+                <i class="menu-icon typcn typcn-document-text"></i>
+                <span class="menu-title">Contact Messages</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
                 <i class="menu-icon typcn typcn-coffee"></i>
                 <span class="menu-title">Basic UI Elements</span>

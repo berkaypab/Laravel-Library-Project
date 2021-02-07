@@ -36,6 +36,7 @@
     <script src="{{asset('assets')}}/js/respond.min.js"></script>
 
 
+
 </head>
 <body class="layout-v3">
 @include('home._header')

@@ -31,7 +31,11 @@
     <div id="content" class="site-content">
         <div id="primary" class="content-area">
             <main id="main" class="site-main">
-                {!!$setting->aboutus!!}
+                <div class="container">
+                    <div class="row">
+                        {!!$setting->aboutus!!}
+                    </div>
+                </div>
             </main>
         </div>
     </div>

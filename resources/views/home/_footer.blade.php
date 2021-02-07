@@ -85,6 +85,7 @@
                 </div>
             </div>
         </div>
+    </div>
 </footer>
 <!-- End: Footer -->
 <!-- jQuery Latest Version 1.x -->

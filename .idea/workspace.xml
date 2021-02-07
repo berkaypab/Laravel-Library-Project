@@ -19,20 +19,27 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dda39e66-985c-4be5-b7a6-2a00a87ec8f3" name="Default Changelist" comment="User Profile Photo , Phone , Address update">
-      <change afterPath="$PROJECT_DIR$/resources/views/home/_blankx.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/about.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/contact.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/home/references.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temps/LIBRARIA-Online-Library/LIBRARIA-Online-Library/books-media-list-view - Kopya.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/temps/LIBRARIA-Online-Library/LIBRARIA-Online-Library/cart - Kopya.html" afterDir="false" />
+    <list default="true" id="dda39e66-985c-4be5-b7a6-2a00a87ec8f3" name="Default Changelist" comment="About Us, References and Contact Pages updated">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/MessageController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_06_022622_create_messages_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_06_023004_message.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/messages.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin/messages_edit.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/message.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/temps/LIBRARIA-Online-Library/LIBRARIA-Online-Library/contact - Kopya.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Setting.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Setting.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/aboutus.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/aboutus.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/about.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/about.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/contact.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/references.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/references.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/test.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/test.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/main.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,6 +189,9 @@
       <path value="$PROJECT_DIR$/vendor/filp/whoops" />
     </include_path>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="1" />
+  </component>
   <component name="ProjectId" id="1lQbYsh9N9qLcbcVgMOW1C2XKad" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -197,18 +207,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/home" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\php\Laravel\resources\views\admin" />
       <recent name="C:\xampp\php\Laravel\resources\views\home" />
       <recent name="C:\xampp\php\Laravel\resources\views\layouts" />
       <recent name="C:\php\LaravelwJetStream\resources\views\admin" />
       <recent name="C:\php\LaravelwJetStream\storage\app\public\images" />
-      <recent name="C:\php\LaravelwJetStream\storage\app\public" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\xampp\php\Laravel\public\storage" />
@@ -259,7 +269,7 @@
       <workItem from="1611339696884" duration="1181000" />
       <workItem from="1611504206779" duration="20708000" />
       <workItem from="1611744022065" duration="4959000" />
-      <workItem from="1612009951752" duration="54097000" />
+      <workItem from="1612009951752" duration="73281000" />
     </task>
     <task id="LOCAL-00001" summary="All pages added to project">
       <created>1608385097387</created>
@@ -359,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612521988976</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="About Us, References and Contact Pages updated">
+      <created>1612578293944</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1612578293944</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,6 +410,7 @@
     <MESSAGE value="Category tree and sub category&#10;Home Page Setting Meta tags data User and page links" />
     <MESSAGE value="Laravel Define User Profile Page  Add Jetstream user page to panel" />
     <MESSAGE value="User Profile Photo , Phone , Address update" />
-    <option name="LAST_COMMIT_MESSAGE" value="User Profile Photo , Phone , Address update" />
+    <MESSAGE value="About Us, References and Contact Pages updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="About Us, References and Contact Pages updated" />
   </component>
 </project>
