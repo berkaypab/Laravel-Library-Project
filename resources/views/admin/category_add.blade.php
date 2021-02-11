@@ -16,7 +16,7 @@
                     <hr>
                     <form class="forms-sample" action="{{route('admin_category_add')}}" method="post">
 
-                        {{ csrf_field() }}
+                        @csrf
                         <input type="hidden" name="_method" value="PUT">
                         <div class="form-group">
                             <label>Parent</label>

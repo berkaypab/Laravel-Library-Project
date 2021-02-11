@@ -6,19 +6,12 @@
             <span class="underline center"></span>
             <p class="lead">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
         </div>
-        <div class="filter-buttons">
-            <div class="filter btn" data-filter="all">All Releases</div>
-            <div class="filter btn" data-filter=".adults">Adults</div>
-            <div class="filter btn" data-filter=".kids-teens">Kids &amp; Teens</div>
-            <div class="filter btn" data-filter=".video">Video</div>
-            <div class="filter btn" data-filter=".audio">Audio</div>
-            <div class="filter btn" data-filter=".books">Books</div>
-            <div class="filter btn" data-filter=".magazines">Magazines</div>
-        </div>
+
     </div>
     <div id="category-filter">
         <ul class="category-list">
             <li class="category-item adults">
+
                 <figure>
                     <img src="{{asset('assets')}}/images/category-filter/home-v1/category-filter-img-01.jpg" alt="New Releaase" />
                     <figcaption class="bg-blue">
@@ -65,6 +58,7 @@
                         </div>
                     </figcaption>
                 </figure>
+
             </li>
             <li class="category-item kids-teens">
                 <figure>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Admin\SettingController;
 use App\Models\Category;
+use App\Models\Image;
 use App\Models\Product;
 use App\Models\Setting;
 use App\Models\Message;
@@ -33,7 +34,38 @@ class HomeController extends Controller
         // echo "Home controller Test";
 
         $setting = Setting::first();
-        return view('home.index', ['setting' => $setting, 'page' => 'home']);
+        $daily = Product::select('id', 'title', 'image', 'price', 'slug')->limit(4)->inRandomOrder()->get();
+        $last = Product::select('id', 'title', 'image', 'price', 'slug')->limit(4)->orderByDesc('id')->get();
+        $picked = Product::select('id', 'title', 'image', 'price', 'slug')->limit(4)->inRandomOrder()->get();
+        $data = [
+
+            'setting' => $setting,
+            'daily' => $daily,
+            'last' => $last,
+            'picked' => $picked,
+            'page' => 'home'
+        ];
+
+        return view('home.index', $data);
+    }
+
+    public static function categoryproducts($id, $slug)
+    {
+        $datalist = Product::where('category_id', $id)->get();
+        $data = Category::find($id);
+        return view('home.category_products', ['data' => $data, 'datalist' => $datalist]);
+    }
+    public function addtocart($id)
+    {
+        echo "add to cart";
+        $data= Product::find($id);
+        print_r($data);
+        exit();
+    }
+    public function product($id,$slug){
+        $datalist = Image::where('product_id', $id)->get();
+        $data =Product::find($id);
+        return view('home.product_detail',['data' => $data, 'datalist' => $datalist]);
     }
 
     public function aboutus()
@@ -79,7 +111,7 @@ class HomeController extends Controller
         $data->save();
 
 
-        return redirect()->route('contact')->with('info','Mesajınız kaydedilmiştir.');
+        return redirect()->route('contact')->with('info', 'Mesajınız kaydedilmiştir.');
     }
 
     public function login()

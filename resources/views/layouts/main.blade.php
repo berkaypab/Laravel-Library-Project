@@ -49,11 +49,11 @@
 @show
 @include('home._welcome')
 
-@include('home._newsletter')
+
 @include('home._categoryfilter')
-@include('home._ourcommunity')
+
 @include('home._meetstaff')
-@include('home._latestblog')
+
 @include('home._newsevent')
 @include('home._social')
 

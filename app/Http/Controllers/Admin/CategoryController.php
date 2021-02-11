@@ -20,23 +20,27 @@ class CategoryController extends Controller
         }
         $parent = Category::find($category->parent_id);
         $title = $parent->title . '>' . $title;
-        return CategoryController::getParentsTree($parent,$title);
+        return CategoryController::getParentsTree($parent, $title);
     }
 
     public function index()
     {
         //echo "Category list";
-        $datalist =Category::with('children')->get();
+        $datalist = Category::with('children')->get();
         return view('admin.category', ['datalist' => $datalist]);
 
     }
 
     public function add()
     {
-        $datalist =Category::with('children')->get();
+        $datalist = Category::with('children')->get();
         //print_r($datalist);
         //exit();
         return view('admin.category_add', ['datalist' => $datalist]);
+
+
+
+
 
     }
 
@@ -69,7 +73,7 @@ class CategoryController extends Controller
     {
         //echo "edit test";
         $data = Category::find($id);
-        $datalist =Category::with('children')->get();
+        $datalist = Category::with('children')->get();
         return view('admin.category_edit', ['data' => $data, 'datalist' => $datalist]);
     }
 
