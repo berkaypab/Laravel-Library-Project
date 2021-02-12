@@ -101,16 +101,15 @@
                                         <div class="col-xs-12 col-sm-7 col-md-6">
                                             <div class="post-center-content">
                                                 <h2>{{$data->title}}</h2>
-                                                <p><strong>Publisher:</strong>{{$data->publisher}}</p>
+                                                <p><strong>Yazar:</strong>{{$data->publisher}}</p>
                                                 <p><strong>ISBN:</strong> 9781581573268, 9780062419385</p>
-                                                <p><strong>Rating:</strong> </p>
-                                                <p><strong>Edition:</strong> First edition</p>
-                                                <p><strong>Year:</strong>{{$data->year}}</p>
-                                                <p><strong>Quantity:</strong>{{$data->quantity}}</p>
+                                                <p><strong>Puanlama:</strong> </p>
+                                                <p><strong>Baskı:</strong> First edition</p>
+                                                <p><strong>Yıl:</strong>{{$data->year}}</p>
+                                                <p><strong>Adet:</strong>{{$data->quantity}}</p>
                                                 <p><strong>Description:</strong>{{$data->description}}</p>
-                                                <p><strong>Language Note:</strong> Icelandic dialogue; English subtitles.</p>
-                                                <p><strong>Genre :</strong> Feature films, Fiction films, Drama</p>
-                                                <p><strong>Topics:</strong>{{$data->keywords}}</p>
+                                                <p><strong>Dil:</strong> Icelandic dialogue; English subtitles.</p>
+                                                <p><strong>Konu:</strong>{{$data->keywords}}</p>
                                                 <div class="actions">
                                                     <ul>
                                                         <li>

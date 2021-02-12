@@ -37,6 +37,8 @@ Route::get('/product/{id}/{slug}', [HomeController::class, 'product'])->name('pr
 //Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->where(['id' => '[0-9]+', 'name' => '[a-z]+']);
 Route::get('/test/{id}/{name}', [HomeController::class, 'test'])->whereNumber('id')->whereAlpha('name')->name('test');
 Route::get('/addtocart/{id}', [HomeController::class, 'addtocart'])->whereNumber('id')->name('addtocart');
+Route::post('/getproduct', [HomeController::class, 'getproduct'])->name('getproduct');
+Route::get('/productlist/{search}', [HomeController::class, 'productlist'])->name('productlist');
 
 // Admin
 

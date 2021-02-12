@@ -55,17 +55,41 @@ class HomeController extends Controller
         $data = Category::find($id);
         return view('home.category_products', ['data' => $data, 'datalist' => $datalist]);
     }
+
+
     public function addtocart($id)
     {
         echo "add to cart";
-        $data= Product::find($id);
+        $data = Product::find($id);
         print_r($data);
         exit();
     }
-    public function product($id,$slug){
+
+    public function productlist($search)
+    {
+
+        $datalist = Product::where('title', 'like', '%' . $search . '%')->get();
+        return view('home.search_products', ['search' => $search, 'datalist' => $datalist]);
+    }
+
+    public function product($id, $slug)
+    {
+        $data = Product::find($id);
         $datalist = Image::where('product_id', $id)->get();
-        $data =Product::find($id);
-        return view('home.product_detail',['data' => $data, 'datalist' => $datalist]);
+
+        return view('home.product_detail', ['data' => $data, 'datalist' => $datalist]);
+    }
+
+    public function getproduct(Request $request)
+    {
+        $search = $request->input('search');
+        $count = Product::where('title', 'like', '%' . $search . '%')->get()->count();
+        if ($count == 1) {
+            $data = Product::where('title', $request->input('search'))->first();
+            return redirect()->route('product', ['id' => $data->id,'slug'=>$data->slug]);
+        } else {
+            return redirect()->route('productlist', ['search' => $search]);
+        }
     }
 
     public function aboutus()

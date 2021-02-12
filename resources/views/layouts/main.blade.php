@@ -47,7 +47,7 @@
 
 
 @show
-@include('home._welcome')
+
 
 
 @include('home._categoryfilter')

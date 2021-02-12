@@ -20,7 +20,7 @@
             </div>
             <div class="breadcrumb">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="{{route('home')}}">Home</a></li>
                     <li><a href="#">Products List</a></li>
                     <li> {{\App\Http\Controllers\Admin\CategoryController::getParentsTree($data ,$data->title)}}</li>
                 </ul>
@@ -120,7 +120,7 @@
                                                         <div class="single-book-box">
                                                             <div class="post-thumbnail">
 
-                                                                <a href="books-media-detail-v1.html"><img alt="Book"
+                                                                <a href="{{route('product',['id'=>$rs->id,'slug'=>$rs->slug])}}"><img alt="Book"
                                                                                                           src="{{Storage::url($rs->image)}}"/></a>
                                                             </div>
                                                             <div class="post-detail">
@@ -522,7 +522,8 @@
             </main>
         </div>
     </div><br><br>
-    @include('home.popular')
     <!-- End: Cart Section -->
+    @include('home.popular')
+
 @endsection
 
