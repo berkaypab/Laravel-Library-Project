@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="center-content">
-                <h2 class="section-title">Meet Our Staff</h2>
+                <h2 class="section-title">Takım Arkadaşlarımız</h2>
                 <span class="underline center"></span>
                 <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>

@@ -16,7 +16,7 @@
             @foreach($picked as $rs)
                 <li>
                     <figure>
-                        <img src="{{Storage::url($rs->image)}}" alt="Book">
+                        <a href="{{route('product',['id'=>$rs->id,'slug'=>$rs->slug])}}">  <img src="{{Storage::url($rs->image)}}" alt="Book"></a>
                         <figcaption>
                             <header>
                                 <h4><a href="#.">{{$rs->title}}</a></h4>
@@ -47,8 +47,8 @@
                                     </li>
                                     <li>
                                         <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top"
-                                           title="Search">
-                                            <i class="fa fa-search"></i>
+                                           title="Reservation">
+                                            <i class="fa fa-ticket "></i>
                                         </a>
                                     </li>
                                     <li>
@@ -80,7 +80,7 @@
             @foreach($daily as $rs)
                 <li>
                     <figure>
-                        <img src="{{Storage::url($rs->image)}}" alt="Book">
+                      <a href="{{route('product',['id'=>$rs->id,'slug'=>$rs->slug])}}">  <img src="{{Storage::url($rs->image)}}" alt="Book"></a>
                         <figcaption>
                             <header>
                                 <h4><a href="#.">{{$rs->title}}</a></h4>
@@ -111,8 +111,8 @@
                                     </li>
                                     <li>
                                         <a href="#" target="_blank" data-toggle="blog-tags" data-placement="top"
-                                           title="Search">
-                                            <i class="fa fa-search"></i>
+                                           title="Reservation">
+                                            <i class="fa fa-ticket "></i>
                                         </a>
                                     </li>
                                     <li>

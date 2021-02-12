@@ -3,7 +3,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="center-content">
-                <h2 class="section-title">News & Events</h2>
+                <h2 class="section-title">Haberler & Duyurular</h2>
                 <span class="underline center"></span>
                 <p class="lead">The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.</p>
             </div>

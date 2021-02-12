@@ -43,6 +43,18 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link" href="{{route('xx')}}">
+                <i class="menu-icon"></i>
+                <span class="menu-title">Reservation</span>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('userpanel')}}">
+                <i class="menu-icon"></i>
+                <span class="menu-title">Users</span>
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link" href="{{route('admin_login')}}">
                 <i class="menu-icon"></i>
                 <span class="menu-title">Login</span>
@@ -57,3 +69,4 @@
     </ul>
 </nav>
 <!-- partial -->
+

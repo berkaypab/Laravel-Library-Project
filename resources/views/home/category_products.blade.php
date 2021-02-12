@@ -172,8 +172,8 @@
                                                                             <a href="#" target="_blank"
                                                                                data-toggle="blog-tags"
                                                                                data-placement="top"
-                                                                               title="Search">
-                                                                                <i class="fa fa-search"></i>
+                                                                               title="Reservation">
+                                                                                <i class="fa fa-ticket "></i>
                                                                             </a>
                                                                         </li>
                                                                         <li>

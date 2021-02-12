@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Admin\SettingController;
 use App\Models\Category;
+use App\Models\Deneme;
 use App\Models\Image;
 use App\Models\Product;
+use App\Models\Reservation;
 use App\Models\Setting;
 use App\Models\Message;
 use Illuminate\Http\Request;
@@ -35,12 +37,15 @@ class HomeController extends Controller
 
         $setting = Setting::first();
         $daily = Product::select('id', 'title', 'image', 'price', 'slug')->limit(4)->inRandomOrder()->get();
-        $last = Product::select('id', 'title', 'image', 'price', 'slug')->limit(4)->orderByDesc('id')->get();
+
+        $dailyfoto = Product::select('id', 'title', 'image', 'price', 'slug')->limit(8)->inRandomOrder()->get();
+        $last = Product::select('id', 'title', 'image', 'price', 'slug')->limit(10)->orderByDesc('id')->get();
         $picked = Product::select('id', 'title', 'image', 'price', 'slug')->limit(4)->inRandomOrder()->get();
         $data = [
 
             'setting' => $setting,
             'daily' => $daily,
+            'dailyfoto' => $dailyfoto,
             'last' => $last,
             'picked' => $picked,
             'page' => 'home'
@@ -65,6 +70,7 @@ class HomeController extends Controller
         exit();
     }
 
+
     public function productlist($search)
     {
 
@@ -86,7 +92,7 @@ class HomeController extends Controller
         $count = Product::where('title', 'like', '%' . $search . '%')->get()->count();
         if ($count == 1) {
             $data = Product::where('title', $request->input('search'))->first();
-            return redirect()->route('product', ['id' => $data->id,'slug'=>$data->slug]);
+            return redirect()->route('product', ['id' => $data->id, 'slug' => $data->slug]);
         } else {
             return redirect()->route('productlist', ['search' => $search]);
         }
@@ -136,6 +142,24 @@ class HomeController extends Controller
 
 
         return redirect()->route('contact')->with('info', 'Mesajınız kaydedilmiştir.');
+    }
+
+    public function reservation($id,Request $request)
+    {
+
+        $data = new Reservation();
+
+        $data->product_id = $id;
+        $data->user_id = 1;
+        $data->message = $request->input('message');
+        $data->approve = false;
+        $data->reservationdate = $request->input('reservationdate');
+
+        $data->save();
+
+
+        return redirect()->route('contact')->with('info', 'x kaydedilmiştir.');
+
     }
 
     public function login()
