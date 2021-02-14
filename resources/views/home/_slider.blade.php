@@ -11,7 +11,7 @@
                    <br>
                    <br>
                    <br>
-                    <p>Libraria gives you access to <strong>Audiobooks,</strong> <strong>eBooks,</strong> <strong>Music,</strong> <strong>Movies and Comics.</strong></p>
+                    <p>Kitap Yurdu.com  <strong>Kitaplar ,</strong> <strong>Dergiler ,</strong> <strong>Music,</strong> <strong>Çizgi Dergiler</strong></p>
 
                         <form action="{{route('getproduct')}}" method="post">
                             @csrf

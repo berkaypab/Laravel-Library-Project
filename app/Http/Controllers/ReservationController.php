@@ -13,20 +13,34 @@ class ReservationController extends Controller
     public function index()
     {
         $data = Reservation::all();
-        foreach ($data as $rs)
-        {
-            $rs->user_id=User::find($rs->user_id)->name;
+        foreach ($data as $rs) {
+            $rs->user_id = User::find($rs->user_id)->name;
 
-            $rs->product_id=Product::find($rs->product_id)->title;
-            if ($rs->approve){
+            $rs->product_id = Product::find($rs->product_id)->title;
+            if ($rs->approve) {
                 $rs->approve = "Onaylandı";
-            }
-            else{
+            } else {
                 $rs->approve = "Onaylanmadı";
 
             }
         }
         return view('admin.reservation', ['data' => $data]);
+    }
+    public function getreservations()
+    {
+        $data = Reservation::all();
+        foreach ($data as $rs) {
+            $rs->user_id = User::find($rs->user_id)->name;
+
+            $rs->product_id = Product::find($rs->product_id)->title;
+            if ($rs->approve) {
+                $rs->approve = "Onaylandı";
+            } else {
+                $rs->approve = "Onay Bekleniyor..";
+
+            }
+        }
+        return view('home.user_reservations', ['data' => $data]);
     }
 
     /**
@@ -39,16 +53,17 @@ class ReservationController extends Controller
 
         $data = Reservation::find($id);
         $data->product_id = $id;
-        $data->approve=true;
+        $data->approve = true;
         $data->save();
         return redirect()->route('xx');
     }
+
     public function admin_reservation_cancel($id)
     {
 
         $data = Reservation::find($id);
         $data->product_id = $id;
-        $data->approve=false;
+        $data->approve = false;
         $data->save();
         return redirect()->route('xx');
     }

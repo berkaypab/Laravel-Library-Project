@@ -80,9 +80,9 @@ $setting = \App\Http\Controllers\HomeController::getsetting();
                                             </a>
 
                                             <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                <a class="dropdown-item" style="color: #0b0d14" href="{{route('myprofile')}}">My Account</a><hr>
-                                                <a class="dropdown-item" style="color: #0b0d14" href="#">Another action</a><br>
-                                                <a class="dropdown-item" style="color: #0b0d14" href="#">Something else here</a><br>
+                                                <a class="dropdown-item" style="color: #0b0d14" href="/myaccount">My Account</a><hr>
+                                                <a class="dropdown-item" style="color: #0b0d14" href="#">Reviews</a><br>
+                                                <a class="dropdown-item" style="color: #0b0d14" href="#"></a><br>
                                             </div>
                                         </div>
 

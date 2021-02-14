@@ -15,7 +15,7 @@
             <div class="breadcrumb">
                 <ul>
                     <li><a href="{{route('home')}}">Home</a></li>
-                    <li>User</li>
+                    <li>Userpanel</li>
                 </ul>
             </div>
         </div>
@@ -28,6 +28,7 @@
                     @include('home.usermenu')
                 </div>
                 <!-- Main -->
+
 
                 <div id="main" class="col-md-10">
                     @include('profile.show')

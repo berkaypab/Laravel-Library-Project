@@ -6,7 +6,7 @@
             <div class="widget_categories">
                 <ul>
                     <li><a href="{{route('myprofile')}}">Profile</a></li>
-                    <li><a href="#">Orders</a></li>
+                    <li><a href="{{route('reserve')}}">Reservations</a></li>
                     <li><a href="#">Reviews</a></li>
                     <li><a href="#">Shopcart</a></li>
                     <li><a href="#">Messages</a></li>

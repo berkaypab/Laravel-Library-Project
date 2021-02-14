@@ -18,6 +18,8 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Role</th>
+                <th>x
+                </th>
             </tr>
             </thead>
             <tbody>
@@ -28,7 +30,8 @@
                     <td>{{$rs->name}}</td>
                     <td>{{$rs->role}}<a href="{{route('roleadd',['id'=>$rs->id])}}"
                            onclick="return !window.open(this.href,'','top=50 left=100 width=1100,height=700')"><i
-                                class="fa fa-plus">+</i></a></td>
+                                class="fa fa-plus">Add Role</i></a></td>
+                    <td>{{$rs->role}}</td>
                 </tr>
             @endforeach
             </tbody>

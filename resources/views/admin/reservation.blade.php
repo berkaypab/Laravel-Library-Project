@@ -18,7 +18,9 @@
                 <th>Username</th>
                 <th>Message</th>
                 <th>Product Name</th>
-                <th>Date</th>
+                <th>Phone</th>
+                <th>Başlangıç Tarihi</th>
+                <th>Bitiş Tarihi</th>
                 <th>Onay Durumu</th>
                 <th>Onayla</th>
                 <th>Reddet</th>
@@ -29,8 +31,10 @@
                 <tr>
                     <td>{{$rs->user_id}}</td>
                     <td>{{$rs->message}}</td>
-                    <td>{{$rs->product_id}}
+                    <td>{{$rs->product_id}}</td>
+                    <td>{{$rs->phone}}</td>
                     <td>{{$rs->reservationdate}}</td>
+                    <td>{{$rs->reservationdatelast}}</td>
                     <td>{{$rs->approve}}</td>
                     <td><a href="{{route('admin_reservation_approve',['id'=>$rs->id])}}"
                            onclick="return confirm('Onay vermek istiyor musunuz? ')">Onayla</a></td>

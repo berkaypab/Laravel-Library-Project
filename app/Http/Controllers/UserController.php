@@ -6,6 +6,7 @@ use App\Models\Role;
 use App\Models\User;
 use App\Models\UserRole;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -20,6 +21,18 @@ class UserController extends Controller
         $datalist = User::all();
 
         return view('admin.userpanel', ['datalist' => $datalist]);
+    }
+
+    public function test()
+
+    {
+        $datalist = User::all();
+
+        return view('admin.userpanel', ['datalist' => $datalist]);
+    }
+    public function userprofile()
+    {
+        return view('home.user_profile');
     }
 
     public function roleadd($id)

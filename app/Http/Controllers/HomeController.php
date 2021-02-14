@@ -81,6 +81,7 @@ class HomeController extends Controller
     public function product($id, $slug)
     {
         $data = Product::find($id);
+        $data->username=Auth::user()->name;
         $datalist = Image::where('product_id', $id)->get();
 
         return view('home.product_detail', ['data' => $data, 'datalist' => $datalist]);
@@ -154,6 +155,10 @@ class HomeController extends Controller
         $data->message = $request->input('message');
         $data->approve = false;
         $data->reservationdate = $request->input('reservationdate');
+
+        $data->reservationdatelast = $request->input('reservationdatelast');
+        $data->phone = $request->input('phone');
+        $data->address = $request->input('address');
 
         $data->save();
 

@@ -19,40 +19,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dda39e66-985c-4be5-b7a6-2a00a87ec8f3" name="Default Changelist" comment="Search Products with Jetstream livewire Autocomplete">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Livewire/Review.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Deneme.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Reservation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Review.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Role.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/UserRole.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/add_approve.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/add_date.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/adddate.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_12_142859_create_reviews_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_12_154050_create_reservations_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_12_154213_reservation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_12_163145_create_add_approves_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_12_165316_create_adddates_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_12_173725_create_roles_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_12_173842_create_user_roles_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_12_175851_role.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_12_175911_user_role.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/reservation.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/role_add.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/userpanel.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/livewire/review.blade.php" afterDir="false" />
+    <list default="true" id="dda39e66-985c-4be5-b7a6-2a00a87ec8f3" name="Default Changelist" comment="user role management, user reservation form added">
+      <change afterPath="$PROJECT_DIR$/app/Models/add_Item.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/add_formitems.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_13_185544_create_add__items_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_02_13_185618_add__item.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/home/user_reservations.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ReservationController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/_sidebar.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_categoryfilter.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_categoryfilter.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_meetstaff.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_meetstaff.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/_newsevent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_newsevent.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/category_products.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/category_products.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/jetstream.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/jetstream.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/reservation.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/reservation.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/userpanel.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/userpanel.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/_slider.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/_slider.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/home/product_detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/product_detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/user_profile.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home/usermenu.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -282,7 +266,7 @@
       <workItem from="1611339696884" duration="1181000" />
       <workItem from="1611504206779" duration="20708000" />
       <workItem from="1611744022065" duration="4959000" />
-      <workItem from="1612009951752" duration="149888000" />
+      <workItem from="1612009951752" duration="174320000" />
     </task>
     <task id="LOCAL-00001" summary="All pages added to project">
       <created>1608385097387</created>
@@ -417,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613124554364</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="user role management, user reservation form added">
+      <created>1613164916433</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1613164916434</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +447,8 @@
     <MESSAGE value="Product Detail, Product Content Detail Pages" />
     <MESSAGE value="Test" />
     <MESSAGE value="Search Products with Jetstream livewire Autocomplete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Search Products with Jetstream livewire Autocomplete" />
+    <MESSAGE value="user role management, user reservation form added" />
+    <option name="LAST_COMMIT_MESSAGE" value="user role management, user reservation form added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
